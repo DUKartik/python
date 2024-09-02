@@ -1,0 +1,81 @@
+# create a programme which is capable to show Questions like KBC 
+
+import random
+teachers_name = [ "Prof. A. K. Tandan",
+"Dr. Jyoti " ,
+"Dr. Rohit Kumar ",
+"Dr. Arjun Tyagi"  ,
+"Dr. Juhi Jain" ,
+"Dr. Pratima "
+"Prof. H. C. Taneja" ,
+
+"Prof. Raj Senani", 
+"Prof. P. K. Singh", 
+"Prof D. R. Bhaskar",  
+"Dr. Vanita Jain", 
+]
+g=0
+print("AceBot Presents\nKON BANEGA CR\n\nto become CR you have to answer 5 out of 3 Questions correct\n")
+d=random.choice(teachers_name)
+print("Q1 ",d,"is the name of your maths teacher")
+b=int(input("enter 1 for true and 2 for false\n"))
+
+if(b==1 and d=="Dr. Jyoti "):
+    print("You are correct")
+    g+=1
+elif(d!="Dr. Jyoti "and b==2):
+    print("you are correct")
+    g+=1
+else:
+    print("You are wrong")    
+
+h=random.choice(teachers_name)
+print("Q2",h,"is the name of FCP teacher")
+b=int(input("enter 1 for true and 2 for false\n"))
+if(b==1 and d=="Dr. Rohit Kumar "):
+    print("You are correct")
+    g+=1
+elif(d!="Dr. Rohit Kumar "and b==2):
+    print("you are correct")
+    g+=1
+else:
+    print("You are wrong") 
+m=random.choice(teachers_name)
+print("Q3",m,"is the name of IEEE teacher")
+b=int(input("enter 1 for true and 2 for false\n"))
+if(b==1 and d=="Dr. Arjun Tyagi"):
+    print("You are correct")
+    g+=1
+elif(d!="Dr. Arjun Tyagi"and b==2):
+    print("you are correct")
+    g+=1
+else:
+    print("You are wrong") 
+
+n=random.choice(teachers_name)
+print("Q4",n,"is the name of FCP(P) teacher")
+b=int(input("enter 1 for true and 2 for false\n"))
+if(b==1 and d=="Dr. Juhi Jain" ):
+    print("You are correct")
+    g+=1
+elif(d!="Dr. Juhi Jain"and b==2):
+    print("you are correct")
+    g+=1
+else:
+    print("You are wrong") 
+k=random.choice(teachers_name)
+print("Q5",k,"is the name of IEEE(P) teacher")
+b=int(input("enter 1 for true and 2 for false\n"))
+if(b==1 and d=="Dr. Pratima "):
+    print("You are correct")
+    g+=1
+elif(d!="Dr. Pratima "and b==2):
+    print("you are correct")
+    g+=1
+else:
+    print("You are wrong") 
+
+if(g>3):
+    print("YOU CAN BE A CR")
+else:
+    print("sorry,You can't be a CR now")
