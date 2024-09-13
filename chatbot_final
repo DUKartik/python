@@ -1,0 +1,61 @@
+# Function for storing details of visitor and giving return as a number of tickets
+def storing_details():
+    g = int(input("Please enter the number of visitors including yourself: "))
+    
+    number_of_ticket = 0 
+    # Open file in write mode once at the start to avoid overwriting
+    with open('visitor_details.txt', 'w') as file:
+        # Loop to get details of each visitor
+        for i in range(0,g,1):
+            print("Details of visitor", i + 1)
+            name_visitor = input("Enter the name of visitor:\n")
+            age_visitor = int(input("Enter the age:\n"))
+            print("\n")
+
+            # Check if age is greater than 5 to increment ticket count
+            if age_visitor > 5:
+                number_of_ticket += 1
+            print("free entry =",g-number_of_ticket,"ticket =",number_of_ticket)
+            
+            # Writing the details to the file
+            file.write(f"Details of visitor {i + 1}:\n")
+            file.write(f"Name: {name_visitor}\n")
+            file.write(f"Age: {age_visitor}\n\n")
+            file.write(f"number of paid ticket:{number_of_ticket}\nnumber of free tickets is: {g-number_of_ticket}" )
+            
+    
+    # Display the number of tickets needed
+    print(f"Total number of tickets needed: {number_of_ticket}")
+    return number_of_ticket
+
+
+# some Questions for users
+Q1 ="What are you looking for\nchoose\n1. Book Tickets or \n2. have Queries\n"
+Q2 ="What is the Queries you have?\n"
+Q4 ="Select Museum\n"
+
+
+
+
+
+
+# RESPONSE AFTER THAT input
+R1 ="At which location you are interested for browsing museum\n"
+R2 ="Some FAQs related to your Question"
+
+
+
+
+
+# YAha se apni ticket booking ki flow suru hui hai 
+initializing=int(input(Q1))
+if(initializing==1):
+    print(R1)
+    '''insert location browsing and selecting function '''
+    storing_details()
+# create a booked ticket details with all cost details 
+
+    
+# Yaha Pe FAQs wali flow 
+else:
+    print(R2)
